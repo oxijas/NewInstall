@@ -7,10 +7,13 @@ sudo pacman -S --noconfirm --needed zsh nnn git enca rsync base-devel bat openss
 sudo pacman -S --noconfirm --needed vifm mc neovim fzf unzip p7zip tar
 
 printf "git username :"
-read ans
+read usr
+echo " "
+printf "email :"
+read email
 
 #NAME=$(hostname|tr '[:upper:]' '[:lower:]')
-git config --global user.email "oxijas@gmail.com"
+git config --global user.email "$email"
 git config --global user.name "$ans"
 git config --global --list
 
