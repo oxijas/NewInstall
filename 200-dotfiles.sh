@@ -14,5 +14,6 @@ else
 	git clone --separate-git-dir=$HOME/.local/share/dotfiles git@github.com:oxijas/dotfiles.git dottmp
 	rsync --recursive --verbose --exclude '.git' dottmp/ $HOME/
 	rm -r dottmp
+	fc-cache -f -v
 	chsh -s /usr/bin/zsh
 fi
